@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/leaflet/leaflet.css" />
+    <script src="/leaflet/leaflet.js"></script>
+    <link rel="icon" src=""/>
+    <link rel="stylesheet" href="/style.css">
+    <meta charset="UTF-8">
+    <title>Map</title>
+</head>
+<body>
+<img src="/leaflet/images/marker-icon.png" style="display:none;">
+
+<div style = "position:relative;height:100%;width:100%;display: flex;flex-flow:column;">
+
+<div class="bar">
+    <form>
+        <div class="item bar-item">
+            <label for="server-input" class="bar-input-label">Connect:</label>
+            <input type="text" id="server-input" placeholder="local"></input>
+        </div>
+        <div id = "user-login-minimize" class = "item bar-item bar-button float-right">
+            <label class = "unselectable">
+                <
+            </label>
+        </div>
+        <div class="item bar-item float-right" id="passkey-input-box">
+            <label for="passkey-input" class="bar-input-label">Passkey:</label>
+            <input type="text" id="passkey-input" placeholder="empty"></input>
+        </div>
+    </form>
+</div>
+
+<div class="middle-container">
+    <div id="map" class="map">
+
+    </div>
+    <div class="menu float-right" id="search-menu" style = "position:relative;display: flex;flex-flow:column;">
+        <div class="middle-container">
+            <div id="search-location" class="item" style="display:block;">
+                <label class="unselectable">
+                    Location:
+                    <input id="search-location-lng" style="width:70px;"></input>
+                    <input id="search-location-lat" style="width:70px;margin-right:12px;"></input>
+                </label>
+            </div>
+            <div id="range" class="item" style="display:block;">
+                <label class="unselectable">
+                    Range:
+                    <input id="search-range" style="width:140px;" value="20"></input>
+                </label>
+            </div>
+        </div>
+        <div id="search-menu-bottom-bar" class="bar">
+            <div class="item bar-item bar-button">
+                <a class="unselectable">Add</a>
+            </div>
+            <div id="search-menu-button" class="item bar-item bar-button float-right">
+                <a class="unselectable">Search</a>
+            </div>
+        </div>
+    </div>
+    <div class="menu" id="detail-menu" style = "position:relative;display:flex;flex-flow:column;">
+        <div id="detail-menu-list" class="middle-container">
+
+        </div>
+        <div id="detail-menu-bottom-bar" class="bar" style="position:relative;bottom:0;">
+            <div class="item bar-item bar-button" id="new-entity-button">
+                <a class="unselectable">New</a>
+            </div>
+            <div id="push-entity-button" class="item bar-item bar-button float-right">
+                <a class="unselectable">Submit</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bar">
+    <div id = "edit-button" class = "item bar-item bar-button">
+        <h1 class = "bar-menu-text unselectable">
+            Edit
+        </h1>
+    </div>
+    <div id = "map-home-button" class = "item bar-item bar-button">
+        <h1 class = "bar-menu-text unselectable">
+            Home
+        </h1>
+    </div>
+    <div id = "map-view-button" class = "item bar-item bar-button">
+        <h1 id = "map-view-button-text" class = "bar-menu-text unselectable">
+            Wind
+        </h1>
+    </div>
+    <div id = "search-button" class = "item bar-item bar-button float-right">
+        <h1 class="bar-menu-text unselectable">
+            Find
+        </h1>
+    </div>
+</div>
+
+</div>
+
+</body>
+<script src="user_interface.js"></script>
+<script src="map_interface.js"></script>
+</html>
